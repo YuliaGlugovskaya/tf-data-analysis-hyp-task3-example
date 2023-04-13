@@ -7,7 +7,7 @@ from statsmodels.stats.weightstats import ztest as ztest
 chat_id = 625123880 # Ваш chat ID, не меняйте название переменной 
  
 def solution(x: np.array) -> bool: 
-    p_value=ztest(x, value=500, alternative = 'larger')
+    p_value=ztest(x, value=500, alternative = 'larger')[1]
     if (p_value<0.02): 
         return True 
     else: 
